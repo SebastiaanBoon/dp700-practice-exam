@@ -18,19 +18,43 @@ A local Streamlit app that parses the included DOCX practice exam and provides:
 
 1. Open this folder in a terminal.
 2. (Recommended) create and activate a virtual environment.
+
+Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+macOS/Linux:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
 3. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 4. Run the app:
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
-5. Open the local URL shown in terminal (typically `http://localhost:8501`).
+5. Open the local URL shown in terminal (typically http://localhost:8501).
+
+## Troubleshooting (Windows)
+
+- If `streamlit` is not recognized, use `python -m streamlit run app.py`.
+- If activation is blocked by PowerShell policy, run this once in PowerShell and reopen terminal:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
 
 ## How It Works
 
